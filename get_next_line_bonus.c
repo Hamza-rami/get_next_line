@@ -6,13 +6,13 @@
 /*   By: hrami <hrami@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/20 22:11:08 by hrami             #+#    #+#             */
-/*   Updated: 2024/11/26 01:44:56 by hrami            ###   ########.fr       */
+/*   Updated: 2024/12/11 22:15:16 by hrami            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line_bonus.h"
 
-static char	*hnadle_eof(char **buffer, char *tmp)
+static char	*hnadl_eof(char **buffer, char *tmp)
 {
 	char	*line;
 	char	*tmp2;
@@ -62,7 +62,7 @@ ssize_t	read_file(int fd, char *temp, char **buffer, ssize_t *bytes_read)
 	return (*bytes_read);
 }
 
-char	*handle_next_line(char **buffer, char *newline_pos)
+char	*handl_next_line(char **buffer, char *newline_pos)
 {
 	char	*line;
 	char	*new_buffer;
@@ -97,9 +97,9 @@ char	*get_next_line(int fd)
 		if (!buffer[fd])
 			return (free(temp), NULL);
 		if (ft_strchr(buffer[fd], '\n'))
-			return (free(temp), handle_next_line
+			return (free(temp), handl_next_line
 				(&buffer[fd], ft_strchr(buffer[fd], '\n')));
 		if (bytes_read == 0)
-			return (hnadle_eof(&buffer[fd], temp));
+			return (hnadl_eof(&buffer[fd], temp));
 	}
 }
