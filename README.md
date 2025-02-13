@@ -18,6 +18,7 @@ Ensure that fd is valid and the file is opened in the appropriate mode.
 My Experience 🌟
 
 This project was built as part of my studies and exploration of C programming. It strengthened my understanding of:
+
 File handling in C, including working with file descriptors.
 Memory management, dynamic allocation, and using static variables.
 Implementing algorithms that require state retention across function calls.
